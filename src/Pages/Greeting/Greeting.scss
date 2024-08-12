@@ -2,16 +2,12 @@
 
 .greeting__outer {
   display: flex;
-  column-gap: 40px;
   padding: 20px 87px;
   @media (max-width: 680px) {
     padding: 3%;
   }
   .content_wrapper {
-    flex-basis: 90%;
-    @media (max-width: 990px) {
-      flex-basis: 100%;
-    }
+    flex-basis: 100%;
 
     .content_title {
       margin-bottom: 30px;
@@ -61,7 +57,7 @@
       .box {
         border-radius: 32px;
         background: rgb(255, 255, 255);
-        color: rgb(102, 102, 128);
+        color: $GreyTextColor;
         font-size: 18px;
         font-weight: 400;
         line-height: 190%;
@@ -111,7 +107,6 @@
     }
   }
   .images_wrapper {
-    flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -120,6 +115,7 @@
     }
 
     img {
+      margin-left: 20px;
       width: 100%;
     }
   }
