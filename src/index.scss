@@ -5,3 +5,38 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: 'Jost-Bold';
+  src: url(../public/Fonts/Jost/Jost-Bold.svg) format('svg'),
+       url(../public/Fonts/Jost/Jost-Bold.ttf) format('truetype'),
+       url(../public/Fonts/Jost/Jost-Bold.woff) format('woff'),
+       url(../public/Fonts/Jost/Jost-Bold.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Jost-Medium';
+  src: url(../public/Fonts/Jost/Jost-Medium.svg) format('svg'),
+       url(../public/Fonts/Jost/Jost-Medium.ttf) format('truetype'),
+       url(../public/Fonts/Jost/Jost-Medium.woff) format('woff'),
+       url(../public/Fonts/Jost/Jost-Medium.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Jost-Regular';
+  src: url(../public/Fonts/Jost/Jost-Regular.svg) format('svg'),
+       url(../public/Fonts/Jost/Jost-Regular.ttf) format('truetype'),
+       url(../public/Fonts/Jost/Jost-Regular.woff) format('woff'),
+       url(../public/Fonts/Jost/Jost-Regular.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'DMSans-Bold';
+  src: url(../public/Fonts/DMSans/DMSans-Bold.svg) format('svg'),
+       url(../public/Fonts/DMSans/DMSans-Bold.ttf) format('truetype'),
+       url(../public/Fonts/DMSans/DMSans-Bold.woff) format('woff'),
+       url(../public/Fonts/DMSans/DMSans-Bold.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'DMSans-Regular';
+  src: url(../public/Fonts/DMSans/DMSans-Regular.svg) format('svg'),
+       url(../public/Fonts/DMSans/DMSans-Regular.ttf) format('truetype'),
+       url(../public/Fonts/DMSans/DMSans-Regular.woff) format('woff'),
+       url(../public/Fonts/DMSans/DMSans-Regular.woff2) format('woff2');
+}
