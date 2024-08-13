@@ -1,8 +1,17 @@
 @import "../../style/vars.scss";
 
 .greeting__outer {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 20px 87px;
+  font-family: $familyJostRegular;
+  font-weight: $light;
+  @media (max-width: 1550px) {
+    grid-template-columns: 1.1fr 1fr;
+  }
+  @media (max-width: 1215px){
+    display: flex;
+  }
   @media (max-width: 680px) {
     padding: 3%;
   }
@@ -20,7 +29,6 @@
           "pink1 pink1 pink1"
           "black2 black2 black2";
         font-size: 56px;
-        font-weight: 400;
         line-height: 126%;
         text-align: left;
         @media (max-width: 870px) {
@@ -31,9 +39,11 @@
         }
         @media (max-width: 480px) {
           font-size: 26px;
+          line-height: 33px;
         }
         .greeting__text_black {
           color: $blackText;
+          font-weight: $light;
         }
         .greeting__text_pink {
           color: $pinkColor;
@@ -41,6 +51,7 @@
         }
         .bl1 {
           grid-area: black1;
+          font-size: 1em;
         }
         .bl2 {
           grid-area: black2;
@@ -96,9 +107,11 @@
       gap: 10px;
       border-radius: 43.63px;
       background: $pinkColor;
+      margin-top: 35px;
       margin-bottom: 45px;
       font-size: 16px;
-      font-weight: 400;
+      font-family: $familyJostRegular;
+      font-weight: $light;
       line-height: 30.8px;
       color: white;
       @media (max-width: 680px) {
@@ -117,6 +130,10 @@
     img {
       margin-left: 20px;
       width: 100%;
+      @media (max-width: 1535px) {
+        width: 100%;
+        max-width: 600px;
+      }
     }
   }
 }
