@@ -54,7 +54,7 @@ export default function Auth() {
   const password = watch('password');
 
   return (
-    <>
+    <div className="auth-container">
       <div className="auth">
         <div className="auth__image">
           <img src={cat} alt="auth" />
@@ -84,7 +84,7 @@ export default function Auth() {
                   type="email"
                   placeholder="Ваш Email"
                   {...register('email', {
-                    required: 'Email обязателен',
+                    required: 'Введите email в формате test@test.com',
                     pattern: {
                       value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                       message: 'Неверный формат Email',
@@ -112,17 +112,6 @@ export default function Auth() {
 
                 <button type="submit">Войти</button>
               </form>
-            </div>
-            <div className="auth__form-enter-with">
-              <div className="auth__form-enter-with-title">
-                <img src={line} alt="line" />
-                <p>Войти через:</p>
-                <img src={line} alt="line" />
-              </div>
-              <div className="auth__form-enter-with-links">
-                <img src={google} alt="google-icon" />
-                <img src={github} alt="github-icon" />
-              </div>
             </div>
           </div>
         ) : (
@@ -180,7 +169,7 @@ export default function Auth() {
                   type="email"
                   placeholder="Ваш Email"
                   {...register('email', {
-                    required: 'Email обязательное поле',
+                    required: 'Введите email в формате test@test.com',
                     pattern: {
                       value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                       message: 'Неверный формат Email',
@@ -195,11 +184,11 @@ export default function Auth() {
                   type="tel"
                   placeholder="Ваш номер телефона"
                   {...register('phoneNumber', {
-                    required: 'Номер телефона обязательное поле',
+                    required:
+                      'Введите номер телефона в формате 8 111 000 00 00',
                     pattern: {
                       value: /^\+?[1-9]\d{1,14}$/,
-                      message:
-                        'Номер телефона должен быть в формате +7 999 000 00 00',
+                      message: 'Неверный формат номера телефона',
                     },
                   })}
                 />
@@ -211,10 +200,10 @@ export default function Auth() {
                   type="password"
                   placeholder="Ваш пароль"
                   {...register('password', {
-                    required: 'Пароль обязательное поле',
+                    required: 'Пароль должен содержать не менее 6 символов',
                     minLength: {
                       value: 6,
-                      message: 'Пароль должен содержать не менее 6 символов',
+                      message: 'Пароль содержит менее 6 символов',
                     },
                   })}
                 />
@@ -239,20 +228,9 @@ export default function Auth() {
                 <button type="submit">Войти</button>
               </form>
             </div>
-            <div className="auth__form-enter-with">
-              <div className="auth__form-enter-with-title">
-                <img src={line} alt="line" />
-                <p>Войти через:</p>
-                <img src={line} alt="line" />
-              </div>
-              <div className="auth__form-enter-with-links">
-                <img src={google} alt="google-icon" />
-                <img src={github} alt="github-icon" />
-              </div>
-            </div>
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 }

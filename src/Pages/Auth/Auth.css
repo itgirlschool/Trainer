@@ -18,36 +18,44 @@
     opacity: 1;
   }
 }
+* {
+  box-sizing: border-box;
+}
+
 .auth {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
+  padding: 4rem;
   gap: 2rem;
   background-color: rgb(244, 244, 244);
+  height: 100vh;
+  overflow: hidden;
 }
 .auth__image img {
   max-width: 80%;
-  min-width: 410px;
+  min-width: 300px;
 }
 .auth__form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   width: 100%;
+  height: 100%;
+  max-height: 100vh;
   max-width: 500px;
-  padding: 4rem;
+  padding: 2rem;
   border-radius: 60px;
   background-color: #ffffff;
   box-shadow: 2px 1px 15px 2px rgba(66, 66, 66, 0.1);
   box-sizing: border-box;
+  overflow-y: auto;
 }
 .auth__form-title {
   font-family: "Jost-Bold", sans-serif;
-  font-size: 32px;
+  font-size: 2em;
   position: relative;
-  width: 100%;
-  max-width: 500px;
+  max-width: none;
+  margin-bottom: 1rem;
 }
 .auth__form-title span {
   color: rgb(234, 93, 128);
@@ -55,34 +63,33 @@
 .auth__form-nav-btns {
   background-color: #f3f3f3;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   padding: 10px;
   gap: 10px;
-  margin-top: 2rem;
   border-radius: 50px;
 }
 .auth__form-nav-btns .active-btn {
   background: rgb(234, 93, 128);
   border: none;
   font-family: "Jost-Regular", sans-serif;
-  padding: 9px 20px;
+  padding: 9px;
   border-radius: 50px;
   cursor: pointer;
   animation: 1s btnAnimationActive;
   color: #ffffff;
-  flex: 1;
+  flex-grow: 1;
 }
 .auth__form-nav-btns .nonactive-btn {
   background: none;
   border: none;
   font-family: "Jost-Regular", sans-serif;
-  flex: 1;
+  flex-grow: 1;
   cursor: pointer;
 }
 .auth__form-data form {
   display: grid;
   margin-top: 2rem;
-  gap: 1rem;
+  gap: 10px;
 }
 .auth__form-data form input {
   border: none;
@@ -90,6 +97,7 @@
   padding: 15px 20px;
   border-radius: 50px;
   font-family: "Jost-Regular", sans-serif;
+  width: 100%;
 }
 .auth__form-data form input::-moz-placeholder {
   color: #36363a;
@@ -106,54 +114,30 @@
 .auth__form-data form button {
   border-radius: 50px;
   padding: 9px 20px;
-  height: 50px;
+  height: auto;
   border: none;
   background-color: rgb(234, 93, 128);
   font-size: 1em;
   font-family: "Jost-Regular", sans-serif;
   color: #ffffff;
-  margin-top: 2rem;
+  margin-top: 1rem;
   cursor: pointer;
-}
-.auth__form-enter-with {
-  margin-top: 2rem;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-}
-.auth__form-enter-with-title {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  font-family: "Jost-Regular", sans-serif;
-}
-.auth__form-enter-with-links {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: space-evenly;
-}
-.auth__form-enter-with-links img {
-  background-color: #ffffff;
-  border-radius: 50px;
-  padding: 10px;
-  box-shadow: 3px 3px 5px 3px rgba(66, 66, 66, 0.1);
-  cursor: pointer;
+  width: 100%;
 }
 .auth .auth-error {
-  background-color: rgb(234, 93, 128);
-  color: #ffffff;
-  text-align: center;
-  padding: 10px;
+  color: red;
+  padding-left: 10px;
   border-radius: 50px;
   animation: 0.5s errorMessage;
   font-size: 0.6em;
   font-family: "Jost-Regular", sans-serif;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 790px) {
   .auth {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
     padding: 1rem;
   }
   .auth__image {
@@ -162,5 +146,6 @@
   .auth__form {
     padding: 2rem;
     max-width: 100%;
+    height: auto;
   }
 }/*# sourceMappingURL=Auth.css.map */
