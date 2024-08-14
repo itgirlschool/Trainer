@@ -20,7 +20,7 @@ export default function Greeting() {
               <p className="greeting__text_pink">
                 в наши удивительные тренажеры
               </p>
-              <p className="greeting__text_black bl2">по HTML и CSS!</p>
+              <p className="greeting__text_black bl2">по программированию!</p>
             </div>
           </div>
           <div className="content_body">
@@ -28,23 +28,22 @@ export default function Greeting() {
               {" "}
               <div className="box box_first">
                 Мы рады приветствовать тебя в нашем виртуальном мире, где ты
-                сможешь познакомиться с HTML и CSS. Это приложение поможет тебе
-                погрузиться в веб-разработку и попробовать себя в качестве
-                разработчика.
+                сможешь познакомиться с языками программирования. Это приложение
+                поможет тебе погрузиться в разработку и попробовать себя в
+                качестве разработчика.
               </div>
               <img src={arrow} alt="arrow" />
             </div>
             <div className="box box_second">
               Не волнуйся, если у тебя нет предварительного опыта в
-              программировании. Наш тренажер #ITGIRLS предназначен для
-              начинающих: для тех, кто еще не определился и хотел бы
-              познакомиться с этим направлением поближе. Мы будем тебя
-              поддерживать на каждом шагу, предоставляя пошаговые инструкции и
-              полезные подсказки.
+              программировании. Наш тренажер #ITGIRLS специально разработан для
+              обучения программированию разработчиков, только начинающих свой
+              путь. Мы будем тебя поддерживать на каждом шагу, предоставляя
+              пошаговые инструкции и полезные подсказки.
             </div>
           </div>
           <div className="btn_wrapper">
-            <p>Создать профиль</p>
+            <p>Начать</p>
             <img src={arrowRight} alt="arrow" />
           </div>
           <div className="content_image"></div>
@@ -53,8 +52,8 @@ export default function Greeting() {
           <img src={cat} alt="cat" />
         </div>
       </section>
-      <div className="wrapper_paw">
-        <img src={paw} alt="paw" />
+      <div className="greeting__wrapper_paw">
+        <img src={paw} alt="paw"/>
       </div>
     </>
   );

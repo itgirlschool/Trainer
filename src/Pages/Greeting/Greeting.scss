@@ -3,7 +3,7 @@
 .greeting__outer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 20px 87px;
+  padding: 20px 0 20px 87px;
   font-family: $familyJostRegular;
   font-weight: $light;
   @media (max-width: 1550px) {
@@ -11,6 +11,7 @@
   }
   @media (max-width: 1215px){
     display: flex;
+    padding: 20px 87px;
   }
   @media (max-width: 680px) {
     padding: 3%;
@@ -116,6 +117,7 @@
       color: white;
       @media (max-width: 680px) {
         width: 100%;
+        margin-bottom: 20px;
       }
     }
   }
@@ -135,5 +137,11 @@
         max-width: 600px;
       }
     }
+  }
+}
+.greeting__wrapper_paw{
+  overflow: hidden;
+  @media (max-width: 530px) and (max-height: 890px) {
+    max-height: 150px;
   }
 }

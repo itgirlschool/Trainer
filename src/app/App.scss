@@ -1,0 +1,11 @@
+@import "../style/vars.scss";
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  background-color: $mainBackground;
+  flex-grow: 1;
+}
