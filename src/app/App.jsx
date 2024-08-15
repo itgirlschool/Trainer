@@ -1,4 +1,4 @@
-import Home from "../Pages/Home/Home";
+import SubjectList from "../Pages/SubjectList/SubjectList";
 import "./App.scss";
 
 function App() {
