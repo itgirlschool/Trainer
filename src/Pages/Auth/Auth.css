@@ -43,7 +43,7 @@
   height: auto;
   max-height: 100vh;
   max-width: 500px;
-  padding: 2rem;
+  padding: 4rem;
   border-radius: 60px;
   background-color: #ffffff;
   box-shadow: 2px 1px 15px 2px rgba(66, 66, 66, 0.1);
@@ -113,7 +113,7 @@
 }
 .auth__form-data form button {
   border-radius: 50px;
-  padding: 9px 20px;
+  padding: 15px 20px;
   height: auto;
   border: none;
   background-color: rgb(234, 93, 128);
