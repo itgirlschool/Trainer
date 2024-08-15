@@ -1,13 +1,21 @@
+import vector from "../../assets/images/vector1.svg";
 import "./Home.scss";
 
 export default function Home() {
   return (
     <div className="homePage">
       <div className="homePage__container">
-        <h1 className="homePage__title">Приветствуем тебя в ITGIRLS!</h1>
+        <div className="homePage__title">
+          <h1>
+            Приветствуем тебя в <span>ITGIRLS!</span>
+            <img src={vector} alt="vector" />
+          </h1>
+        </div>
         <div className="homePage__subject-list">
           <div className="homePage__subject-item">
-            <h2 className="homePage__subject-item-name">HTML и CSS</h2>
+            <h2 className="homePage__subject-item-name">HTML и CSS
+              <img src="" alt="" />
+            </h2>
             <p className="homePage__subject-item-desc">
               Курс предназначен для начинающих, желающих освоить основы
               веб-разработки. В ходе обучения вы научитесь создавать

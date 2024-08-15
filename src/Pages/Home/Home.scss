@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: $familyJostRegular;
+  font-family: $familyJostMedium;
   background: $mainBackground;
 
   .homePage__container {
@@ -20,50 +20,69 @@
     justify-content: center;
 
     .homePage__title {
-      font-size: 24px;
-      font-weight: $bold;
-      color: $blackText;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background: $whiteColor;
+      border-radius: 24px;
+      padding: 30px 10px;
       margin: 0;
+      & h1 {
+        display: inline;
+        position: relative;
+        font-size: 24px;
+        text-align: center;
+        font-weight: $bold;
+        color: $blackText;
+        & span {
+          font-size: 24px;
+          text-align: center;
+          font-weight: $bold;
+          color: $pinkColor;
+        }
+        & img {
+          position: absolute;
+          top: -80%;
+          right: -8%;
+        }
+      }
 
       &::selection {
         color: white;
-        background: rgb(185, 66, 96);
+        background: $pinkColor;
       }
     }
 
     .homePage__subject-list {
-      width: 80%;
+      width: 100%;
       margin-top: 25px;
-      padding: 20px;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
       gap: 20px;
       border-radius: 32px;
-      background: $whiteColor;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
       .homePage__subject-item {
         height: 250px;
-        flex-basis: 48.5%;
-        padding: 15px;
+        flex-basis: 49%;
+        padding: 20px;
         position: relative;
         display: flex;
         flex-direction: column;
         align-items: start;
-        border: 2px solid rgb(185, 66, 96);
         border-radius: 24px;
         background-color: $whiteColor;
         transition: 0.3s ease-in-out;
 
         .homePage__subject-item-name {
           font-weight: $normal;
-          color: rgb(185, 66, 96);
+          color: $pinkColor;
           margin-bottom: 10px;
 
           &::selection {
             color: $whiteColor;
-            background: rgb(185, 66, 96);
+            background: $pinkColor;
           }
         }
 
@@ -79,27 +98,27 @@
 
           &::selection {
             color: white;
-            background: rgb(185, 66, 96);
+            background: $pinkColor;
           }
         }
 
         .homePage__subject-item-btn {
-          color: rgb(185, 66, 96);
+          color: $pinkColor;
           position: absolute;
-          bottom: 15px;
-          right: 15px;
+          bottom: 20px;
+          right: 20px;
           border: none;
           background: none;
           cursor: pointer;
 
           &::selection {
             color: white;
-            background: rgb(185, 66, 96);
+            background: $pinkColor;
           }
         }
 
         &:hover {
-          background: rgb(185, 66, 96);
+          background: $pinkColor;
 
           .homePage__subject-item-name,
           .homePage__subject-item-desc,
@@ -107,7 +126,7 @@
             color: white;
 
             &::selection {
-              color: rgb(185, 66, 96);
+              color: $pinkColor;
               background: $whiteColor;
             }
           }
@@ -145,6 +164,11 @@
   .homePage {
     .homePage__container {
       align-items: start;
+      .homePage__title{
+        & img{
+          display: none;
+        }
+      }
     }
   }
 }
