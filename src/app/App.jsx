@@ -1,8 +1,12 @@
+import Header from "../components/Header/Header";
+import Greeting from "../Pages/Greeting/Greeting";
 import "./App.scss";
 
 function App() {
   return (
-  <>hello world</>
+  <>
+  <Header/>
+  </>
   );
 }
 
