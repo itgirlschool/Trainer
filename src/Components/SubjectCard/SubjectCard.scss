@@ -20,7 +20,6 @@
     margin-bottom: 15px;
   }
   .subjectCard__progress,
-  .subjectCard__homework,
   .subjectCard__rating {
     display: flex;
     align-items: center;
@@ -35,12 +34,7 @@
       color: $GreyTextColor;
       font-size: 16px;
     }
-    .subjectCard__homework-status {
-      display: flex;
-      align-items: center;
-    }
   }
-  .subjectCard__homework,
   .subjectCard__rating {
     margin-top: 10px;
   }
