@@ -6,6 +6,7 @@ const userSlice = createSlice({
     email: null,
     password: null,
     displayName: null,
+    displaySurname: null,
     phoneNumber: null,
     token: null,
     error: null,
@@ -15,6 +16,7 @@ const userSlice = createSlice({
       state.email = action.payload.email;
       state.password = action.payload.password;
       state.displayName = action.payload.displayName;
+      state.displaySurname = action.payload.displaySurname;
       state.phoneNumber = action.payload.phoneNumber;
       state.token = action.payload.token;
     },
@@ -23,6 +25,7 @@ const userSlice = createSlice({
       state.email = null;
       state.password = null;
       state.displayName = null;
+      state.displaySurname = null;
       state.phoneNumber = null;
       state.token = null;
     },
