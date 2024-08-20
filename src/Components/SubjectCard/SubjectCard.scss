@@ -1,0 +1,56 @@
+@import "../../style/vars.scss";
+
+.subjectCard {
+  position: relative;
+  width: 32%;
+  padding: 15px;
+  background: $whiteColor;
+  border: 1px solid $whiteColor;
+  border-radius: 30px;
+  .subjectCard__module {
+    margin-bottom: 20px;
+    font-weight: $light;
+    color: $GreyTextColor;
+    font-size: 16px;
+  }
+  .subjectCard__name {
+    font-weight: $bold;
+    color: $blackText;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  .subjectCard__progress,
+  .subjectCard__rating {
+    display: flex;
+    align-items: center;
+    & p {
+      font-weight: $normal;
+      color: $blackText;
+      font-size: 16px;
+    }
+    & span {
+      margin-left: 5px;
+      font-weight: $normal;
+      color: $GreyTextColor;
+      font-size: 16px;
+    }
+  }
+  .subjectCard__rating {
+    margin-top: 10px;
+  }
+  .subjectCard__status {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+@media (max-width: 1200px) {
+  .subjectCard {
+    width: 48.5%;
+  }
+}
+@media (max-width: 768px){
+    .subjectCard{
+        width: 100%;
+    }
+  }
