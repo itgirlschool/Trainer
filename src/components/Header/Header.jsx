@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import Select from './Selectors/Select.jsx';
 import logo_icon from '../../assets/images/logo_icon.svg';
 import { MenuButton } from './MenuButton/MenuButton.jsx';
@@ -243,23 +243,22 @@ const about = [
 
 const Header = ( ) => {
   const [isOpen, setOpen] = useState();
-  const menuRef = useRef(null);
-  
+
   return (
     <header className='header-container'>
       <img className='header-logo' src={logo_icon} alt='logo' />
-      <div className={`header-info ${isOpen ? "active" : ""}`} ref={menuRef}>
+      <div className={`header-info ${isOpen ? "active" : ""}`}>
         <div className='header-info-container'>
           <Select items={openLessons} content='Открытые уроки' />
           <Select items={profession} content='Профессии' />
           <Select items={course} content='Интересные курсы' />
           <Select items={about} content='О школе' />
-        </div>        
+        </div>
       </div>
       <div className='header-info-container-btn'>
           <p className='header-text'>Нас уже 600+ учениц</p>
-      </div>         
-      <MenuButton isActive={isOpen} onClick={() => setOpen(!isOpen)} />   
+      </div>
+      <MenuButton isActive={isOpen} onClick={() => setOpen(!isOpen)} />
     </header>
   );
 };
