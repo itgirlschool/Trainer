@@ -20,7 +20,7 @@ export default function Greeting() {
               <p className="greeting__text_pink">
                 в наши удивительные тренажеры
               </p>
-              <p className="greeting__text_black bl2">по HTML и CSS!</p>
+              <p className="greeting__text_black bl2">по программированию</p>
             </div>
           </div>
           <div className="content_body">
@@ -28,8 +28,8 @@ export default function Greeting() {
               {" "}
               <div className="box box_first">
                 Мы рады приветствовать тебя в нашем виртуальном мире, где ты
-                сможешь познакомиться с HTML и CSS. Это приложение поможет тебе
-                погрузиться в веб-разработку и попробовать себя в качестве
+                сможешь познакомиться с программированием. Это приложение поможет тебе
+                погрузиться в мир разработки и попробовать себя в качестве
                 разработчика.
               </div>
               <img src={arrow} alt="arrow" />
