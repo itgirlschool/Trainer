@@ -1,10 +1,11 @@
 import SubjectCard from "../../Components/SubjectCard/SubjectCard";
 import progressBar from "../../assets/images/subjectListProgressBar.svg";
 import cat from "../../assets/images/subjectListCat.svg";
+import data from "../../front-end.js";
 import "./subjectList.scss";
 
 export default function SubjectList() {
-  const subjects = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const subjects = data.subjects;
   return (
     <div className="subjectList">
       <div className="subjectList__container">

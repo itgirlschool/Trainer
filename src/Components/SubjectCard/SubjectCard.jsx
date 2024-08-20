@@ -6,11 +6,11 @@ import "./SubjectCard.scss";
 export default function SubjectCard({data}) {
   return (
     <div className="subjectCard">
-      <p className="subjectCard__module">Модуль {data}</p>
-      <h2 className="subjectCard__name">Переменные и типы данных</h2>
+      <p className="subjectCard__module">Модуль {data.id}</p>
+      <h2 className="subjectCard__name">{data.name}</h2>
       <div className="subjectCard__progress">
         <p>Просмотрено:</p>{" "}
-        <span className="subjectCard__progress-status">0%</span>
+        <span className="subjectCard__progress-status">{data.progress}%</span>
       </div>
       <div className="subjectCard__rating">
         <p>Оценка:</p>
