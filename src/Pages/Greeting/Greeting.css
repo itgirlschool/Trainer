@@ -1,7 +1,7 @@
 .greeting__outer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 20px 87px;
+  padding: 20px 0 20px 87px;
   font-family: "Jost-Regular", sans-serif;
   font-weight: 400;
 }
@@ -13,6 +13,7 @@
 @media (max-width: 1215px) {
   .greeting__outer {
     display: flex;
+    padding: 20px 87px;
   }
 }
 @media (max-width: 680px) {
@@ -127,6 +128,7 @@
 @media (max-width: 680px) {
   .greeting__outer .content_wrapper .btn_wrapper {
     width: 100%;
+    margin-bottom: 20px;
   }
 }
 .greeting__outer .images_wrapper {
@@ -147,5 +149,14 @@
   .greeting__outer .images_wrapper img {
     width: 100%;
     max-width: 600px;
+  }
+}
+
+.greeting__wrapper_paw {
+  overflow: hidden;
+}
+@media (max-width: 530px) and (max-height: 890px) {
+  .greeting__wrapper_paw {
+    max-height: 150px;
   }
 }/*# sourceMappingURL=Greeting.css.map */

@@ -132,6 +132,87 @@
   font-size: 0.6em;
   font-family: "Jost-Regular", sans-serif;
 }
+.auth-restore-password {
+  margin-top: 20px;
+}
+.auth-restore-password p {
+  text-align: center;
+  font-size: 0.7em;
+  font-family: "DMSans-Regular", sans-serif;
+}
+.auth-restore-password span {
+  color: rgb(234, 93, 128);
+  cursor: pointer;
+  text-decoration: underline;
+}
+.auth-modal-layout {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.auth-modal-restore-password {
+  margin-top: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  z-index: 1000000;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 450px;
+  padding: 4rem 1rem 4rem 1rem;
+  border-radius: 50px;
+}
+.auth-modal-restore-password p {
+  font-size: 1.2em;
+  text-align: center;
+  font-family: "Jost-Bold", sans-serif;
+}
+.auth-modal-restore-password form {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+.auth-modal-restore-password form input {
+  justify-self: center;
+  border: none;
+  background-color: #f3f3f3;
+  padding: 15px 20px;
+  border-radius: 50px;
+  font-family: "Jost-Regular", sans-serif;
+  width: 100%;
+}
+.auth-modal-restore-password form input::-moz-placeholder {
+  color: #36363a;
+  font-family: "Jost-Regular", sans-serif;
+}
+.auth-modal-restore-password form input::placeholder {
+  color: #36363a;
+  font-family: "Jost-Regular", sans-serif;
+}
+.auth-modal-restore-password form input:focus {
+  background-color: rgba(234, 93, 128, 0.2);
+  outline: none;
+}
+.auth-modal-restore-password form button {
+  justify-self: center;
+  border-radius: 50px;
+  padding: 15px 20px;
+  height: auto;
+  border: none;
+  background-color: rgb(234, 93, 128);
+  font-size: 1em;
+  font-family: "Jost-Regular", sans-serif;
+  color: #ffffff;
+  margin-top: 1rem;
+  cursor: pointer;
+  width: 100%;
+}
 
 @media screen and (max-width: 790px) {
   .auth {
