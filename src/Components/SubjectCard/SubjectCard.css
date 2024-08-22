@@ -1,0 +1,57 @@
+.subjectCard {
+  position: relative;
+  width: 32%;
+  padding: 15px;
+  background: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 30px;
+}
+.subjectCard .subjectCard__module {
+  margin-bottom: 20px;
+  font-weight: 400;
+  color: rgb(102, 102, 128);
+  font-size: 16px;
+}
+.subjectCard .subjectCard__name {
+  font-weight: 600;
+  color: rgb(24, 27, 50);
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.subjectCard .subjectCard__progress,
+.subjectCard .subjectCard__rating {
+  display: flex;
+  align-items: center;
+}
+.subjectCard .subjectCard__progress p,
+.subjectCard .subjectCard__rating p {
+  font-weight: 500;
+  color: rgb(24, 27, 50);
+  font-size: 16px;
+}
+.subjectCard .subjectCard__progress span,
+.subjectCard .subjectCard__rating span {
+  margin-left: 5px;
+  font-weight: 500;
+  color: rgb(102, 102, 128);
+  font-size: 16px;
+}
+.subjectCard .subjectCard__rating {
+  margin-top: 10px;
+}
+.subjectCard .subjectCard__status {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+@media (max-width: 1200px) {
+  .subjectCard {
+    width: 48.5%;
+  }
+}
+@media (max-width: 768px) {
+  .subjectCard {
+    width: 100%;
+  }
+}/*# sourceMappingURL=SubjectCard.css.map */

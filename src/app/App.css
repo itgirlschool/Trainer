@@ -1,1 +1,10 @@
-/*# sourceMappingURL=App.css.map */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  background-color: rgb(244, 244, 244);
+  flex-grow: 1;
+}/*# sourceMappingURL=App.css.map */

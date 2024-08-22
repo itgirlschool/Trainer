@@ -11,6 +11,7 @@ import line from '../../assets/images/line.svg';
 
 export default function Auth() {
   const [signIn, setSignIn] = useState(true);
+  const [modal, setModal] = useState(false);
 
   const dispatch = useDispatch();
 
@@ -52,6 +53,10 @@ export default function Auth() {
   };
 
   const password = watch('password');
+
+  const handleOpenModalResetPassword = () => {
+    setModal(true);
+  };
 
   return (
     <div className="auth-container">
@@ -112,7 +117,27 @@ export default function Auth() {
 
                 <button type="submit">Войти</button>
               </form>
+              <div className="auth-restore-password">
+                <p>
+                  Забыли пароль?{' '}
+                  <span onClick={handleOpenModalResetPassword}>
+                    Восстановить
+                  </span>
+                </p>
+              </div>
             </div>
+            {modal && (
+              <div className="auth-modal">
+                <div className="auth-modal-layout"></div>
+                <div className="auth-modal-restore-password">
+                  <p>Восстановить пароль</p>
+                  <form>
+                    <input type="email" placeholder="Введите Email" />
+                    <button>Отправить</button>
+                  </form>
+                </div>
+              </div>
+            )}
           </div>
         ) : (
           <div className="auth__form">
