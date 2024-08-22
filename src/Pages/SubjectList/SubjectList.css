@@ -1,1 +1,113 @@
-/*# sourceMappingURL=SubjectList.css.map */
+.subjectList {
+  width: 100%;
+  min-height: 100vh;
+  padding: 30px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Jost-Medium", sans-serif;
+  background: rgb(244, 244, 244);
+}
+.subjectList .subjectList__container .subjectList__subject {
+  position: relative;
+  width: 100%;
+  padding: 30px;
+  margin-bottom: 30px;
+  border: 1px solid #ffffff;
+  border-radius: 40px;
+  background: #ffffff;
+}
+.subjectList .subjectList__container .subjectList__subject .subjectList__subject-info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.subjectList .subjectList__container .subjectList__subject .subjectList__subject-info .subjectList__subject-name {
+  margin-top: 10px;
+  font-family: "Jost-Bold", sans-serif;
+  font-weight: 600;
+  color: rgb(24, 27, 50);
+  font-size: 32px;
+}
+.subjectList .subjectList__container .subjectList__subject .subjectList__subject-info .subjectList__subject-overallProgress {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.subjectList .subjectList__container .subjectList__subject .subjectList__subject-info .subjectList__subject-overallProgress .subjectList__subject-overallProgress-text {
+  display: flex;
+  align-items: center;
+}
+.subjectList .subjectList__container .subjectList__subject .subjectList__subject-info .subjectList__subject-overallProgress .subjectList__subject-overallProgress-text p {
+  font-weight: 500;
+  color: rgb(24, 27, 50);
+  font-size: 14px;
+}
+.subjectList .subjectList__container .subjectList__subject .subjectList__subject-info .subjectList__subject-overallProgress .subjectList__subject-overallProgress-text span {
+  margin-left: 5px;
+  font-family: "Jost-Bold", sans-serif;
+  font-weight: 600;
+  color: rgb(24, 27, 50);
+  font-size: 18px;
+}
+.subjectList .subjectList__container .subjectList__subject .subjectList__subject-image {
+  position: absolute;
+  z-index: 10;
+  right: 100px;
+  top: -30px;
+}
+.subjectList .subjectList__container .subjectList__themes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 22px;
+}
+
+@media (max-width: 1200px) {
+  .subjectList .subjectList__container .subjectList__subject .subjectList__subject-image {
+    right: 20px;
+  }
+  .subjectList .subjectList__container .subjectList__themes {
+    gap: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .subjectList .subjectList__container .subjectList__subject {
+    margin-bottom: 15px;
+  }
+  .subjectList .subjectList__container .subjectList__subject .subjectList__subject-image {
+    display: none;
+  }
+  .subjectList .subjectList__container .subjectList__themes {
+    gap: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .subjectList {
+    padding: 30px;
+  }
+  .subjectList .subjectList__container .subjectList__subject .subjectList__subject-info {
+    align-items: center;
+  }
+  .subjectList .subjectList__container .subjectList__subject .subjectList__subject-info .subjectList__subject-progressBar {
+    display: none;
+  }
+  .subjectList .subjectList__container .subjectList__subject .subjectList__subject-image {
+    display: none;
+  }
+  .subjectList .subjectList__container .subjectList__themes {
+    gap: 15px;
+  }
+}
+@media (max-width: 480px) {
+  .subjectList .subjectList__container .subjectList__subject .subjectList__subject-info .subjectList__subject-name {
+    text-align: center;
+  }
+  .subjectList .subjectList__container .subjectList__subject .subjectList__subject-info .subjectList__subject-overallProgress {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=SubjectList.css.map */

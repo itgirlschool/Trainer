@@ -1,0 +1,15 @@
+.header__menu-button {
+  display: none;
+}
+@media (max-width: 480px) {
+  .header__menu-button {
+    display: block;
+    position: relative;
+    margin-left: auto;
+    width: 28px;
+    height: 24px;
+    background-color: transparent;
+    padding: 0;
+    border: 0;
+  }
+}/*# sourceMappingURL=MenuButton.css.map */
