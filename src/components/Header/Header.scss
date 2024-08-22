@@ -1,6 +1,7 @@
 @import '../../style/vars.scss';
 
 .header-container {
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,6 +20,7 @@
   }
 
   .header-info-container {
+    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -56,7 +58,7 @@
     font-size: 14px;
     line-height: 28px;
     cursor: default;
-    @media (max-width: 480px) {
+    @media (max-width: 870px) {
       display: none;
     }
   }
