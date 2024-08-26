@@ -8,6 +8,7 @@ import Profile from '../Pages/Profile/Profile';
 import ErrorPage from '../Pages/Error/Error';
 import Header from '../Components/Header/Header';
 import SubjectList from "../Pages/SubjectList/SubjectList.jsx";
+import Subjects from "../Pages/Subjects/Subjects.jsx";
 
 function App() {
   return (
