@@ -9,6 +9,7 @@ import ErrorPage from '../Pages/Error/Error';
 import Header from '../Components/Header/Header';
 import SubjectList from "../Pages/SubjectList/SubjectList.jsx";
 import Subjects from "../Pages/Subjects/Subjects.jsx";
+import AdminPage from "../Pages/AdminPage/AdminPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path="/auth" element={<Authorisation />} />
           <Route path="/greeting" element={<Greeting />} />
+          <Route path="/admin" element={<AdminPage />} />
           <Route path="/" element={<Home />} />
           <Route path="/subjectlist" element={<SubjectList />} />
           <Route path="/task" element={<TaskPage />} />

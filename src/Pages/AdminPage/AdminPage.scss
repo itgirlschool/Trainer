@@ -1,0 +1,323 @@
+@import "../../style/vars.scss";
+
+@import "../../style/vars.scss";
+
+@keyframes btnAnimationActive {
+  from {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes errorMessage {
+  from {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.admin-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.admin-exit {
+  display: flex;
+  margin-top: 20px;
+  margin-left: 20px;
+  border: none;
+  align-items: center;
+  gap: 5px;
+  &__text {
+    font-family: $familyJostRegular;
+    font-size: 1em;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.admin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  gap: 5rem;
+  background-color: $mainBackground;
+
+  overflow: hidden;
+
+  &__image {
+    img {
+      max-width: 100%;
+      min-width: 350px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    max-width: 500px;
+    padding: 4rem;
+    border-radius: 60px;
+    background-color: $whiteColor;
+    box-shadow: 2px 1px 15px 2px rgba(66, 66, 66, 0.1);
+    box-sizing: border-box;
+    overflow-y: auto;
+
+    &-title {
+      font-family: $familyJostBold;
+      font-size: 2em;
+      position: relative;
+      max-width: none;
+
+      span {
+        color: $pinkColor;
+      }
+    }
+    &-nav-btns {
+      background-color: #f3f3f3;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 10px;
+      gap: 10px;
+      border-radius: 50px;
+
+      .active-btn {
+        background: $pinkColor;
+        border: none;
+        font-family: $familyJostRegular;
+        padding: 9px;
+        border-radius: 50px;
+        cursor: pointer;
+        animation: 1s btnAnimationActive;
+        color: $whiteColor;
+        flex-grow: 1;
+      }
+      .nonactive-btn {
+        background: none;
+        border: none;
+        font-family: $familyJostRegular;
+        flex-grow: 1;
+        cursor: pointer;
+      }
+    }
+
+    &-data {
+      form {
+        display: grid;
+        margin-top: 2rem;
+        gap: 10px;
+
+        input {
+          border: none;
+          background-color: #f3f3f3;
+          padding: 15px 20px;
+          border-radius: 50px;
+          font-family: $familyJostRegular;
+          width: 100%;
+          &::placeholder {
+            color: #36363a;
+            font-family: $familyJostRegular;
+          }
+          &:focus {
+            background-color: rgb(234, 93, 128, 0.2);
+            outline: none;
+          }
+        }
+
+        button {
+          border-radius: 50px;
+          padding: 15px 20px;
+          height: auto;
+          border: none;
+          background-color: $pinkColor;
+          font-size: 1em;
+          font-family: $familyJostRegular;
+          color: $whiteColor;
+          margin-top: 1rem;
+          cursor: pointer;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .admin-error {
+    color: red;
+    padding-left: 10px;
+    border-radius: 50px;
+    animation: 0.5s errorMessage;
+    font-size: 0.6em;
+    font-family: $familyJostRegular;
+  }
+  &-restore-password {
+    margin-top: 20px;
+    p {
+      text-align: center;
+      font-size: 0.7em;
+      font-family: $familyDMSansRegular;
+    }
+    span {
+      color: $pinkColor;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+
+  &-modal {
+    &-layout {
+      background-color: rgba(0, 0, 0, 0.5);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+    &-restore-password {
+      margin-top: 20px;
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      z-index: 1000000;
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      max-width: 450px;
+      padding: 4rem 1rem 4rem 1rem;
+      border-radius: 50px;
+      p {
+        font-size: 1.2em;
+        text-align: center;
+        font-family: $familyJostBold;
+      }
+      form {
+        margin-top: 2rem;
+        display: grid;
+        gap: 1rem;
+        input {
+          justify-self: center;
+          border: none;
+          background-color: #f3f3f3;
+          padding: 15px 20px;
+          border-radius: 50px;
+          font-family: $familyJostRegular;
+          width: 100%;
+          &::placeholder {
+            color: #36363a;
+            font-family: $familyJostRegular;
+          }
+          &:focus {
+            background-color: rgb(234, 93, 128, 0.2);
+            outline: none;
+          }
+        }
+        button {
+          justify-self: center;
+          border-radius: 50px;
+          padding: 15px 20px;
+          height: auto;
+          border: none;
+          background-color: $pinkColor;
+          font-size: 1em;
+          font-family: $familyJostRegular;
+          color: $whiteColor;
+          margin-top: 1rem;
+          cursor: pointer;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.admin-answer {
+  &__container {
+    display: flex;
+    margin: 0 auto;
+    gap: 1em;
+    align-items: center;
+    margin-bottom: 20px;
+    font-family: $familyJostRegular;
+  }
+
+  &__link {
+    border-radius: 32px;
+    background: rgb(255, 255, 255);
+    color: $GreyTextColor;
+    min-width: 10em;
+    min-height: 50px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 190%;
+    text-align: left;
+    padding: 5px 20px;
+    border: 2px solid $pinkColor;
+    @media (max-width: 680px) {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 170%;
+    }
+  }
+  &__button {
+    position: relative;
+    padding: 0;
+    height: auto;
+    border: none;
+  }
+  &__button:hover {
+    transform: scale(1.1);
+  }
+  &__button:hover span {
+    visibility: visible;
+  }
+  &__img {
+    width: 30px;
+  }
+  &__tip {
+    visibility: hidden;
+    position: absolute;
+    top: -30px;
+    left: -15px;
+    width: auto;
+    color: $GreyTextColor;
+    font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  .auth {
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    padding: 1rem;
+
+    &__image {
+      display: none;
+    }
+
+    &__form {
+      padding: 2rem;
+      max-width: 100%;
+      height: auto;
+      width: auto;
+    }
+  }
+}

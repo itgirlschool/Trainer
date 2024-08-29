@@ -5,8 +5,8 @@ import titleIcon from "../../assets/images/vector1.svg";
 import arrow from "../../assets/images/arrow_07.svg";
 import arrowRight from "../../assets/images/arrow-right.svg";
 import "./Greeting.scss";
-
 export default function Greeting() {
+
   return (
     <>
       <section className="greeting__outer">
@@ -53,7 +53,7 @@ export default function Greeting() {
         </div>
       </section>
       <div className="greeting__wrapper_paw">
-        <img src={paw} alt="paw"/>
+        <img src={paw} alt="paw" />
       </div>
     </>
   );
