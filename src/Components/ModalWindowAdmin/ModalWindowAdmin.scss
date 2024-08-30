@@ -1,0 +1,140 @@
+@import "../../style/vars.scss";
+
+@keyframes appearance {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.admin-modal {
+  position: absolute;
+  display: flex;
+  width: 100vw;
+  height: 100%;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  overflow: auto;
+  animation: appearance 0.3s ease-in-out;
+  font-family: $familyJostBold;
+  font-size: 24px;
+  &__container {
+    position: relative;
+    padding-top: 40px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    overflow: hidden;
+    border-radius: 15px;
+  }
+
+  @media (max-width: 768px) {
+    top: 5px;
+    right: 10px;
+    font-size: 32px;
+  }
+  &__overlay {
+    position: fixed;
+    width: 100%;
+    min-height: 100%;
+    z-index: 1;
+    overflow: auto;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    max-width: 500px;
+    padding: 4rem;
+    border-radius: 60px;
+    background-color: $whiteColor;
+    box-shadow: 2px 1px 15px 2px rgba(66, 66, 66, 0.1);
+    box-sizing: border-box;
+    overflow-y: auto;
+    @media screen and (max-width: 1020px) {
+      padding: 3em;
+    }
+    @media screen and (max-width: 790px) {
+      padding: 2rem;
+      max-width: 100%;
+      height: auto;
+      width: auto;
+    }
+
+    &_title {
+      font-family: $familyJostBold;
+      font-size: 2em;
+      position: relative;
+      max-width: none;
+
+      span {
+        color: $pinkColor;
+      }
+    }
+
+    &_data {
+      form {
+        display: grid;
+        margin-top: 2rem;
+        gap: 10px;
+
+        input {
+          border: none;
+          background-color: #f3f3f3;
+          padding: 15px 20px;
+          border-radius: 50px;
+          font-family: $familyJostRegular;
+          width: 100%;
+          &::placeholder {
+            color: #36363a;
+            font-family: $familyJostRegular;
+          }
+          &:focus {
+            background-color: rgb(234, 93, 128, 0.2);
+            outline: none;
+          }
+        }
+
+        button {
+          border-radius: 50px;
+          padding: 15px 20px;
+          height: auto;
+          border: none;
+          background-color: $pinkColor;
+          font-size: 1em;
+          font-family: $familyJostRegular;
+          color: $whiteColor;
+          margin-top: 1rem;
+          cursor: pointer;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.admin-error {
+  color: red;
+  padding-left: 10px;
+  border-radius: 50px;
+  animation: 0.5s errorMessage;
+  font-size: 0.6em;
+  font-family: $familyJostRegular;
+}
+
+@keyframes errorMessage {
+  from {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
