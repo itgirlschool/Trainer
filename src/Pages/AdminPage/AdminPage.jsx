@@ -1,23 +1,57 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "./AdminPage.scss";
 import exit from "../../assets/images/exit-svgrepo-com 1.svg";
+import copy from "../../assets/images/copy.svg";
 import add from "../../assets/images/addCourse.svg";
 import addgroup from "../../assets/images/create_group.svg";
 import data from "./data.json";
 import ModalWindowAdmin from "../../Components/ModalWindowAdmin/ModalWindowAdmin";
+import { useNavigate } from "react-router-dom";
+import { getCourse } from "../../Common/Admin/postGroupData";
 
 export default function AdminPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [typeModal, setTypeModal] = useState(null);
+  const screenWidth = window.screen.width;
+  const [isMobile, setIsMobile] = useState(screenWidth);
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    window.onresize = () => {
+      setIsMobile(window.screen.width);
+    };
+  }, []);
 
   const onHandleModalCourse = () => {
-    setIsModalOpen(!isModalOpen);
-    setTypeModal("course");
+    if (isMobile <= 530) {
+      navigate("/addnewcourse");
+    } else if (isMobile > 530) {
+      setIsModalOpen(!isModalOpen);
+      setTypeModal("course");
+      document.body.style.overflow = "hidden";
+    }
+  };
+
+  const onHandleModalGroup = (e) => {
+    const courseChosen = e.currentTarget.getAttribute("data-key");
+    getCourse(courseChosen);
+    if (isMobile <= 530) {
+      navigate("/addnewgroup");
+    } else if (isMobile > 530) {
+      setIsModalOpen(!isModalOpen);
+      setTypeModal("group");
+      document.body.style.overflow = "hidden";
+    }
+  };
+
+  const onHandleModal = (value) => {
+    setIsModalOpen(value);
   };
 
   const copyToClipboard = async (e) => {
-    const link = e.target.getAttribute("data-key");
+    const link = e.currentTarget.getAttribute("data-key");
     try {
       await navigator.clipboard.writeText(link);
       alert(link);
@@ -28,7 +62,9 @@ export default function AdminPage() {
 
   return (
     <>
-      {isModalOpen && <ModalWindowAdmin type={typeModal} />}
+      {isModalOpen && (
+        <ModalWindowAdmin type={typeModal} onClose={onHandleModal} />
+      )}
       <div className="admin-container">
         <div className="admin-container__header">
           <button className="admin-container__header_button">
@@ -46,15 +82,13 @@ export default function AdminPage() {
         <div className="admin-container__main">
           {data.map((item) => (
             <div className="admin-container__main_list">
-              <div className="admin-container__course">
-                <h2
-                  key={item.moduleIdid}
-                  className="admin-container__course_title"
-                >
+              <div className="admin-container__course" key={item.id}>
+                <p className="admin-container__course_title">
                   {item.moduleName}
-                </h2>
+                </p>
                 <button
-                  data-key={item.moduleId}
+                  data-key={item.moduleName}
+                  onClick={onHandleModalGroup}
                   className="admin-container__course_button"
                 >
                   <img src={addgroup} alt="addgroup" />
@@ -68,13 +102,23 @@ export default function AdminPage() {
                       <p className="admin-container__group_text">
                         {group.groupName}
                       </p>
-                      <button
-                        data-key={group.link}
-                        onClick={copyToClipboard}
-                        className="admin-container__group_button"
-                      >
-                        Скопировать ссылку
-                      </button>
+                      {isMobile > 530 ? (
+                        <button
+                          data-key={group.link}
+                          onClick={copyToClipboard}
+                          className="admin-container__group_button"
+                        >
+                          Скопировать ссылку
+                        </button>
+                      ) : (
+                        <button
+                          data-key={group.link}
+                          onClick={copyToClipboard}
+                          className="admin-container__group_buttonmobile"
+                        >
+                          <img src={copy} alt="copy" />
+                        </button>
+                      )}
                     </div>
                   ))}
                 </>

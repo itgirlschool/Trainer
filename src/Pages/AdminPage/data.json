@@ -1,7 +1,7 @@
 [
   {
     "moduleName": "Front-end",
-    "moduleId": 1,
+    "id": 1,
     "groups": [
       {
         "groupName": "front_20",
@@ -22,7 +22,7 @@
   },
   {
     "moduleName": "Back-end",
-    "moduleId": 2,
+    "id": 2,
     "groups": [
       {
         "groupName": "back_20",
@@ -43,7 +43,16 @@
   },
   {
     "moduleName": "No-code",
-    "moduleId": 3,
+    "id": 3,
+    "groups": [{
+        "groupName": "no-code_1",
+        "link": "",
+        "id": 31
+      }]
+  },
+  {
+    "moduleName": "TypeScript",
+    "id": 4,
     "groups": []
   }
 ]
