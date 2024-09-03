@@ -1,6 +1,6 @@
 import "./AddCourseData.scss";
 
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import postGroupData from "../../Common/Admin/postGroupData";
 
@@ -22,7 +22,7 @@ export default function AddGroupData() {
       await postGroupData(groupName);
       reset();
     } catch (err) {
-      // setIsError(true);
+      console.log(err);
     }
   };
 

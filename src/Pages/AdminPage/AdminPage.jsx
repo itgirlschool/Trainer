@@ -4,6 +4,7 @@ import "./AdminPage.scss";
 import exit from "../../assets/images/exit-svgrepo-com 1.svg";
 import copy from "../../assets/images/copy.svg";
 import add from "../../assets/images/addCourse.svg";
+import done from "../../assets/images/doneStatus.svg";
 import addgroup from "../../assets/images/create_group.svg";
 import data from "./data.json";
 import ModalWindowAdmin from "../../Components/ModalWindowAdmin/ModalWindowAdmin";
@@ -50,14 +51,35 @@ export default function AdminPage() {
     setIsModalOpen(value);
   };
 
-  const copyToClipboard = async (e) => {
+  const copyToClipboardMobile = async (e) => {
     const link = e.currentTarget.getAttribute("data-key");
     try {
       await navigator.clipboard.writeText(link);
-      alert(link);
+      e.target.setAttribute("src", `${done}`);
     } catch (err) {
       console.error("Ошибка при копировании текста:", err);
     }
+    setTimeout(() => {
+      e.target.setAttribute("src", `${copy}`);
+    }, 2000);
+  };
+  const copyToClipboardDesktop = async (e) => {
+    const link = e.currentTarget.getAttribute("data-key");
+    try {
+      await navigator.clipboard.writeText(link);
+      e.target.innerText = "Ссылка скопирована";
+      e.target.style.backgroundColor = "white";
+      e.target.style.border = "2px solid rgb(234, 93, 128)";
+      e.target.style.color = "rgb(234, 93, 128)";
+    } catch (err) {
+      console.error("Ошибка при копировании текста:", err);
+    }
+    setTimeout(() => {
+      e.target.innerText = "Скопировать ссылку";
+      e.target.style.backgroundColor = "rgb(234, 93, 128)";
+      e.target.style.border = "none";
+      e.target.style.color = "white";
+    }, 2000);
   };
 
   return (
@@ -102,10 +124,11 @@ export default function AdminPage() {
                       <p className="admin-container__group_text">
                         {group.groupName}
                       </p>
+
                       {isMobile > 530 ? (
                         <button
                           data-key={group.link}
-                          onClick={copyToClipboard}
+                          onClick={copyToClipboardDesktop}
                           className="admin-container__group_button"
                         >
                           Скопировать ссылку
@@ -113,7 +136,7 @@ export default function AdminPage() {
                       ) : (
                         <button
                           data-key={group.link}
-                          onClick={copyToClipboard}
+                          onClick={copyToClipboardMobile}
                           className="admin-container__group_buttonmobile"
                         >
                           <img src={copy} alt="copy" />

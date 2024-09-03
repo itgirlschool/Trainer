@@ -10,7 +10,6 @@ const postCourseData = async (courseName) => {
       body: JSON.stringify(data),
     }).then((response) => {
       if (response.ok) {
-        console.log(data);
         return response.json();
       } else {
         throw new Error(response.statusText);

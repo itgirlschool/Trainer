@@ -64,8 +64,6 @@
       img {
         width: 20px;
       }
-      span {
-      }
       &:hover {
         transform: scale(1.1);
         transition: 0.5s ease-in-out;
@@ -102,7 +100,7 @@
       color: $whiteColor;
       cursor: pointer;
       &:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
         transition: 0.5s ease-in-out;
       }
     }

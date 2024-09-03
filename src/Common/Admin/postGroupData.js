@@ -2,11 +2,10 @@ let course;
 
 export const getCourse = (value) => {
   course = value;
-  console.log(course);
   return course;
 };
 
-const postGroupData = async ( groupName) => {
+const postGroupData = async (groupName) => {
   const url = "https://jsonplaceholder.typicode.com/posts";
   const data = { courseName: course, groupName: groupName };
   try {
@@ -18,7 +17,6 @@ const postGroupData = async ( groupName) => {
       body: JSON.stringify(data),
     }).then((response) => {
       if (response.ok) {
-        console.log(data);
         return response.json();
       } else {
         throw new Error(response.statusText);
