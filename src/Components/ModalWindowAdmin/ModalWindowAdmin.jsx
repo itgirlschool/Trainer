@@ -1,6 +1,6 @@
 import "./ModalWindowAdmin.scss";
 
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import postCourseData from "../../Common/Admin/postCourseData";
 import postGroupData from "../../Common/Admin/postGroupData";
@@ -23,7 +23,7 @@ export default function ModalWindowAdmin({ type, onClose }) {
         reset();
         onClose(false);
       } catch (err) {
-        // setIsError(true);
+        console.log(err);
       }
     } else if (type === "course") {
       try {
@@ -31,7 +31,7 @@ export default function ModalWindowAdmin({ type, onClose }) {
         reset();
         onClose(false);
       } catch (err) {
-        // setIsError(true);
+        console.log(err);
       }
     }
   };
