@@ -165,6 +165,14 @@ export default function Auth() {
                   placeholder="Ваше имя"
                   {...register('name', {
                     required: 'Имя обязательно поле',
+                    minLength: {
+                      value: 2,
+                      message: 'Имя не может содержать менее 1 символа',
+                    },
+                    maxLength: {
+                      value: 25,
+                      message: 'Имя не может содержать более 25 символов',
+                    },
                     pattern: {
                       value: /^[a-zA-Zа-яА-Я]+$/,
                       message: 'Имя должно содержать только буквы',
@@ -180,6 +188,14 @@ export default function Auth() {
                   placeholder="Ваша фамилия"
                   {...register('surname', {
                     required: 'Фамилия обязательное поле',
+                    minLength: {
+                      value: 2,
+                      message: 'Фамилия не может содержать менее 1 символа',
+                    },
+                    maxLength: {
+                      value: 25,
+                      message: 'Фамилия не может содержать более 25 символов',
+                    },
                     pattern: {
                       value: /^[a-zA-Zа-яА-Я]+$/,
                       message: 'Фамилия должна содержать только буквы',
@@ -195,6 +211,10 @@ export default function Auth() {
                   placeholder="Ваш Email"
                   {...register('email', {
                     required: 'Введите email в формате test@test.com',
+                    maxLength: {
+                      value: 40,
+                      message: 'Email не может содержать более 40 символов',
+                    },
                     pattern: {
                       value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                       message: 'Неверный формат Email',
@@ -209,8 +229,16 @@ export default function Auth() {
                   type="tel"
                   placeholder="Ваш номер телефона"
                   {...register('phoneNumber', {
-                    required:
-                      'Введите номер телефона в формате 8 111 000 00 00',
+                    minLength: {
+                      value: 11,
+                      message:
+                        'Номер телефона не может содержать менее 11 символов',
+                    },
+                    maxLength: {
+                      value: 24,
+                      message:
+                        'Номер телефона не может содержать более 24 символов',
+                    },
                     pattern: {
                       value: /^\+?[1-9]\d{1,14}$/,
                       message: 'Неверный формат номера телефона',
@@ -225,10 +253,14 @@ export default function Auth() {
                   type="password"
                   placeholder="Ваш пароль"
                   {...register('password', {
-                    required: 'Пароль должен содержать не менее 6 символов',
+                    required: 'Пароль должен содержать не менее 4 символов',
                     minLength: {
-                      value: 6,
-                      message: 'Пароль содержит менее 6 символов',
+                      value: 4,
+                      message: 'Пароль содержит менее 4 символов',
+                    },
+                    maxLength: {
+                      value: 20,
+                      message: 'Пароль содержит более 20 символов',
                     },
                   })}
                 />
