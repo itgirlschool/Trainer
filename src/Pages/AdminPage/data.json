@@ -1,0 +1,58 @@
+[
+  {
+    "moduleName": "Front-end",
+    "id": 1,
+    "groups": [
+      {
+        "groupName": "front_20",
+        "link": "/mcmmc/",
+        "id": 10
+      },
+      {
+        "groupName": "front_21",
+        "link": "/ghjjkdldld;d;d/",
+        "id": 11
+      },
+      {
+        "groupName": "front_22",
+        "link": "/ghgbgjgkgkgk3747/",
+        "id": 12
+      }
+    ]
+  },
+  {
+    "moduleName": "Back-end",
+    "id": 2,
+    "groups": [
+      {
+        "groupName": "back_20",
+        "link": "",
+        "id": 21
+      },
+      {
+        "groupName": "back_21",
+        "link": "",
+        "id": 22
+      },
+      {
+        "groupName": "back_22",
+        "link": "",
+        "id": 23
+      }
+    ]
+  },
+  {
+    "moduleName": "No-code",
+    "id": 3,
+    "groups": [{
+        "groupName": "no-code_1",
+        "link": "",
+        "id": 31
+      }]
+  },
+  {
+    "moduleName": "TypeScript",
+    "id": 4,
+    "groups": []
+  }
+]
