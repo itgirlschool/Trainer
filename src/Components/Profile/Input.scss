@@ -1,0 +1,14 @@
+@import '../../style/vars.scss';
+
+.input{
+    background-color: $mainBackground;
+    border: none;
+    border-radius: 50px;
+    height: 60px;
+    padding: 11px 30px;
+    max-width: 386px;
+
+    &:active{
+        border: $pinkColor;
+    }
+}
