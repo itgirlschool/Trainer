@@ -1,0 +1,128 @@
+@import "../../style/vars.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.profile-container {
+  background-color: $mainBackground;
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  padding: 2rem;
+  gap: 2rem;
+
+  .profile__user {
+    grid-row: 1/3;
+
+    .profile__user-info {
+      display: flex;
+      border-radius: 40px;
+      background-color: $whiteColor;
+      padding: 40px;
+      gap: 1.5rem;
+
+      .user-name {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        font-family: $familyJostRegular;
+        font-size: 16px;
+        line-height: 22.4px;
+
+        .greetings {
+          font-weight: $light;
+          position: relative;
+
+          .vector {
+            position: absolute;
+            top: -30%;
+            right: -10%;
+          }
+        }
+
+        .username {
+          font-weight: $bold;
+        }
+      }
+    }
+  }
+
+  .profile__settings {
+    border-radius: 40px;
+    background-color: $whiteColor;
+    font-family: $familyJostRegular;
+    padding: 40px;
+
+    .profile__settings-title {
+      font-family: $familyJostRegular;
+      font-size: 32px;
+      font-weight: $bold;
+    }
+
+    .profile__settings-icon {
+      display: flex;
+      gap: 1rem;
+      margin: 40px 0;
+
+      .info {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+
+        .icon-btn {
+          background-color: $whiteColor;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .profile__settings-user {
+      display: grid;
+      grid-template-rows: repeat(3, 1fr);
+      grid-auto-flow: column;
+      row-gap: 10px;
+      column-gap: 30px;
+      max-width: 802px;
+    }
+
+    .profile__btn {
+      border-radius: 50px;
+      height: 60px;
+      width: 47.5%;
+      max-width: 386px;
+      background-color: $pinkColor;
+      color: $whiteColor;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: $light;
+      margin-top: 40px;
+      padding: 11px 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .profile-container {
+    grid-template-columns: 100%;
+    grid-auto-flow: row;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile-container {
+    .profile__settings .profile__settings-user {
+      grid-template-rows: repeat(6, 1fr);
+      grid-auto-flow: row;
+    }
+
+    .profile__settings .profile__btn {
+      width: 100%;
+    }
+  }
+}
